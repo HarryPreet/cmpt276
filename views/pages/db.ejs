@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ../partials/header.ejs %>
+  <link rel="stylesheet" href="./stylesheets/style.css">
+</head>
+
+<body>
+
+
+<div class="container">
+<h2>Database Results</h2>
+<table class= "newTable">
+  <tr>
+    <td>Name</td>
+    <td>Size</td>
+    <td>Height</td>
+    <td>Type</td>
+  </tr>
+  <tr>
+    <% rows.forEach(function(r) { %>
+        <td><%= r.name%></td><td><%= r.size%></td> <td><%= r.height%></td> <td><%= r.type%></td>
+  </tr>
+    <% }); %>
+  </table>
+
+</div>
+
+</body>
+</html>
